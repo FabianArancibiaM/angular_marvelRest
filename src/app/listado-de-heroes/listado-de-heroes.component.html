@@ -5,6 +5,7 @@
       <input type="text" [(ngModel)]="searchString" name="searchString" class="form-control" id="search" placeholder="Búsqueda de super-héroe">
     </div>
   </form>
+  <br>
   <div *ngFor="let heroe of heroesService.heroes; let i = index;" class="col-xs-12 col-sm-6 col-md-3">
     <a [routerLink]="['/heroe', heroe.id]" class="hero-entry" 
     [style.border-color]="heroesService['group_colors'][heroe.teamColor]" 
